@@ -4,6 +4,27 @@ import org.apache.logging.log4j.*;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
+    public static int add(int a,int b)
+    {
+        int res = a+b;
+        return res;
+    }
+    public static int sub(int a,int b)
+    {
+        int res = a-b;
+        return res;
+    }
+    public static int mul(int a,int b)
+    {
+        int res = a*b;
+        return res;
+    }
+    public static int div(int a,int b)
+    {
+        int res = a/b;
+        return res;
+    }
+
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
         System.out.println("Welcome to Calculator...");
@@ -20,19 +41,19 @@ public class Main {
         int res = 0;
         if(type == 1)
         {
-            res = a+b;
+            res = add(a,b);
         }    
         if(type == 2)
         {
-            res = a-b;
+            res = sub(a,b);
         }
         if(type == 3)
         {
-            res = a*b;
+            res = mul(a,b);
         }
         if(type == 4)
         {
-            res = a/b;
+            res = div(a,b);
         }
         System.out.println("result = " + res);
     }
