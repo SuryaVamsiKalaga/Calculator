@@ -1,24 +1,27 @@
 package org.example;
 import java.util.*;
-import org.apache.logging.log4j.*;
 
 public class Main {
-    private static final Logger logger = LogManager.getLogger(Main.class);
+    // private static final Logger logger = LogManager.getLogger(Main.class);
+
     public static int add(int a,int b)
     {
         int res = a+b;
         return res;
     }
+
     public static int sub(int a,int b)
     {
         int res = a-b;
         return res;
     }
+
     public static int mul(int a,int b)
     {
         int res = a*b;
         return res;
     }
+    
     public static int div(int a,int b)
     {
         int res = a/b;
@@ -27,6 +30,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
+        while(true)
+        {
+
         System.out.println("Welcome to Calculator...");
         System.out.println("Choose your operations");
         System.out.println("1. Addition");
@@ -55,6 +61,9 @@ public class Main {
         {
             res = div(a,b);
         }
+        if(type == 5) break;
+
         System.out.println("result = " + res);
+    }
     }
 }
