@@ -37,7 +37,7 @@ public class CalculatorTest {
         int a = 1;
         int b = 2;
         int expectedResult = -1;
-        Assert.assertNotEquals(expectedResult, calculator.sub(a, b));
+        Assert.assertEquals(expectedResult, calculator.sub(a, b));
     }
 
     @Test
@@ -55,7 +55,7 @@ public class CalculatorTest {
         int a = 1;
         int b = 2;
         int expectedResult = 2;
-        Assert.assertNotEquals(expectedResult, calculator.mul(a, b));
+        Assert.assertEquals(expectedResult, calculator.mul(a, b));
     }
 
     @Test
@@ -73,7 +73,7 @@ public class CalculatorTest {
         int a = 16;
         int b = 2;
         int expectedResult = 8;
-        Assert.assertNotEquals(expectedResult, calculator.div(a, b));
+        Assert.assertEquals(expectedResult, calculator.div(a, b));
     }
 
     @Test
