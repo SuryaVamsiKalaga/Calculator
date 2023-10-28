@@ -5,27 +5,27 @@ import org.apache.logging.log4j.*;
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
-    public static int add(int a,int b)
+    public static double add(double a,double b)
     {
-        int res = a+b;
+        double res = a+b;
         return res;
     }
 
-    public static int sub(int a,int b)
+    public static double sub(double a,double b)
     {
-        int res = a-b;
+        double res = a-b;
         return res;
     }
 
-    public static int mul(int a,int b)
+    public static double mul(double a,double b)
     {
-        int res = a*b;
+        double res = a*b;
         return res;
     }
     
-    public static int div(int a,int b)
+    public static double div(double a,double b)
     {
-        int res = a/b;
+        double res = a/b;
         return res;
     }
 
@@ -48,10 +48,10 @@ public class Main {
             break;
         }
         System.out.println("Enter the 1st operand");
-        int a = myObj.nextInt();
+        double a = myObj.nextDouble();
         System.out.println("Enter the 2nd operand");
-        int b = myObj.nextInt();
-        int res = 0;
+        double b = myObj.nextDouble();
+        double res = 0.0;
         if(type == 1)
         {
             logger.info("Start OP: Addition");
@@ -75,6 +75,10 @@ public class Main {
             logger.info("Start OP: Division");
             res = div(a,b);
             logger.info("End OP: Addition");
+        }
+        else
+        {
+            logger.warn("Invalid Input");
         }
 
         System.out.println("result = " + res);
