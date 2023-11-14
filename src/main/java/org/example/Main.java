@@ -4,7 +4,6 @@ import org.apache.logging.log4j.*;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
-    //testing pull
     public static double add(double a,double b)
     {
         double res = a+b;
